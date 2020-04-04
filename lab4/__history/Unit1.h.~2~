@@ -1,0 +1,45 @@
+//---------------------------------------------------------------------------
+
+#ifndef Unit1H
+#define Unit1H
+//---------------------------------------------------------------------------
+#include <System.Classes.hpp>
+#include <Vcl.Controls.hpp>
+#include <Vcl.StdCtrls.hpp>
+#include <Vcl.Forms.hpp>
+#include <Vcl.Menus.hpp>
+#include <Vcl.ActnList.hpp>
+#include <Vcl.ImgList.hpp>
+#include <Vcl.ComCtrls.hpp>
+#include <Vcl.ToolWin.hpp>
+//---------------------------------------------------------------------------
+class TForm1 : public TForm
+{
+__published:	// IDE-managed Components
+	TLabel *LabelA;
+	TEdit *EditForA;
+	TLabel *LabelB;
+	TLabel *LabelC;
+	TLabel *LabelE;
+	TEdit *EditForB;
+	TEdit *EditForC;
+	TEdit *EditForE;
+	TEdit *EditForEx;
+	TButton *ButtonTranslate;
+	TButton *ButtonToSolve;
+	TEdit *EditTranslated;
+	TButton *ButtonClear;
+	TButton *ButtonExit;
+	TEdit *EditAnswer;
+	TLabel *LabelTranslated;
+	TLabel *LabelAnswer;
+	TLabel *LabelExercise;
+
+private:	// User declarations
+public:		// User declarations
+	__fastcall TForm1(TComponent* Owner);
+};
+//---------------------------------------------------------------------------
+extern PACKAGE TForm1 *Form1;
+//---------------------------------------------------------------------------
+#endif

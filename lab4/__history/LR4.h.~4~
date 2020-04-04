@@ -1,0 +1,55 @@
+//---------------------------------------------------------------------------
+
+#ifndef LR4H
+#define LR4H
+//---------------------------------------------------------------------------
+//структура для элемента стека операций
+struct Node_op
+{
+  char c;
+  Node_op* p;
+};
+
+//структура для элемента стека чисел
+struct Node_num
+{
+  float c;
+  Node_num* p;
+};
+//перечисление для контроля ошибок при вводе
+typedef enum
+{
+  all_true=1,
+  bad_operands,
+  few_brackets,
+  much_brackets,
+  few_operands,
+  few_operators
+}errors;
+
+class Stack
+{
+public:
+  char* s;
+  char* sv; //вспомогательная строка
+  Node_op* t1; //стека операций
+  Node_num* t2; //стека чисел
+  void Stack_init();
+  void check();
+  void bspaces();
+  void postfix();
+  float calc();
+  void out_err_code();
+  errors err_code;
+  ~Stack();
+private:
+  int prioritet_stack();
+  bool operand_true(char c);
+  void first1(char c);
+  void push1(char c); //добавление в стек операций
+  char pop1(); //выталкивание из стека операций
+  void first2(float c); //создание стека чисел
+  void push2(float c);
+  float pop2(); //выталкивание из стека чисел
+};
+#endif
