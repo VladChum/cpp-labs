@@ -1,0 +1,75 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+#include "queue.cpp"
+#include "MainWindow.h"
+//---------------------------------------------------------------------------
+#pragma resource "*.dfm"
+TForm1 *Form1;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+	: TForm(Owner)
+{
+	srand(time(0));
+}
+
+void TForm1::InTwoCircle(Queue &InputQueue)
+{
+	Queue FirstQueue(0);
+	Queue SecondQueue(0);
+	element* max = InputQueue.GetMax();
+	element* min = InputQueue.GetMin();
+	EditMin->Text = AnsiString(min->data);
+	EditMax->Text = AnsiString(max->data);
+	InputQueue.SetHead(max->next);
+	while(InputQueue.ShowFirst() != min->data)
+	{
+		ListBoxFirst->Items->Add(AnsiString(InputQueue.ShowFirst()));
+		FirstQueue.Push(InputQueue.Pop());
+	}
+	while(!InputQueue.IsEmpty())
+	{
+		ListBoxSecond->Items->Add(AnsiString(InputQueue.ShowFirst()));
+		SecondQueue.Push(InputQueue.Pop());
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ButtonOKClick(TObject *Sender)
+{
+	ListBox->Clear();
+	ListBoxFirst->Clear();
+	ListBoxSecond->Clear();
+	Queue InputQueue(0);
+	char* str = AnsiString(EditInput->Text).c_str();
+	char * pch = strtok (str," ");
+	InputQueue.Push(atoi(pch));
+	ListBox->Items->Add(AnsiString(pch));
+	while (pch != NULL)
+	{
+	  pch = strtok (NULL, " ");
+	  if(pch != NULL) InputQueue.Push(atoi(pch));
+	  ListBox->Items->Add(AnsiString(pch));
+	}
+	InTwoCircle(InputQueue);
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::ButtonRandomClick(TObject *Sender)
+{
+	ListBox->Clear();
+	ListBoxFirst->Clear();
+	ListBoxSecond->Clear();
+	Queue InputQueue(0);
+	int temp;
+	for(int i = 0; i < 40; i++)
+	{
+		temp = rand()%100;
+		InputQueue.Push(temp);
+		ListBox->Items->Add(AnsiString(temp));
+	}
+	InTwoCircle(InputQueue);
+}
+//---------------------------------------------------------------------------
+
