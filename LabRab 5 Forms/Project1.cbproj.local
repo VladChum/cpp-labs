@@ -1,24 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
 	<Transactions>
-    <Transaction>1899.12.30 00:00:00.000.926,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.h=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\queue.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.304,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.dfm=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.416,D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\List.h=D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\queue.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.794,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.304,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.cpp=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.304,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.h=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.538,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1.cbproj=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\Project1.cbproj</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.360,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.dfm=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.dfm</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.324,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.cpp=D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\queue.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.103,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.h</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.416,D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\List.cpp=D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\queue.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.078,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.103,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.cpp</Transaction>
-    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.dfm=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.dfm</Transaction>
     <Transaction>1899.12.30 00:00:00.000.386,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.078,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
     <Transaction>1899.12.30 00:00:00.000.850,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.103,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.311,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.304,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.416,D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\queue.h=D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\List.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\queue.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.926,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\Project1PCH1.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.416,D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\queue.cpp=D:\1_kurs\OAIP_2sem\lab_Oaip\LabRab 5 Forms\List.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.103,C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.cpp=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.324,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\queue.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\queue.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.304,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.h=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.304,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\MainWindow.dfm=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\MainWindow.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.360,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.794,=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1PCH1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.538,D:\BSUIR\ОАиП (С++)\Лабы решения 2 семестр Жвакина\LabRab 5 Forms\Project1.cbproj=C:\Users\Артём\Documents\Embarcadero\Studio\Projects\Project1.cbproj</Transaction>
   </Transactions>
 </BorlandProject>

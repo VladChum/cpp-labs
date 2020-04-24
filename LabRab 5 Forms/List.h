@@ -3,7 +3,7 @@
 #ifndef ListH
 #define ListH
 //---------------------------------------------------------------------------
-struct element
+struct  element
 {
 	element* next;
 	element* prev;
@@ -14,10 +14,10 @@ class List
 {
 		element *Tail;
 	public:
+		List() ;
 		element* head;
-		element* max;
-		element* min;
-		List(int i);
+		element* min[10];
+		element* max[10];
 		void Push(int x);
 		int Pop();
 		int ShowFirst();

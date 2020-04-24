@@ -38,9 +38,9 @@ object Form1: TForm1
   object Label4: TLabel
     Left = 272
     Top = 77
-    Width = 48
+    Width = 40
     Height = 13
-    Caption = 'First circle'
+    Caption = 'New List'
   end
   object Label6: TLabel
     Left = 149

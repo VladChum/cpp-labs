@@ -4,43 +4,47 @@
 
 #include "List.h"
 //---------------------------------------------------------------------------
-List::List(int i)
+List::List()
 {
 	head = NULL;
-  //	Tail = NULL;
+	Tail = NULL;
 }
+
+int kolMax = 0;
+int kolMin = 0;
 
 void List::Push(int x)
 {
-	if(head != NULL)
-	{
-		element* NewElement = new element;
-		NewElement->data= x;
-		NewElement->prev = head->prev;
-		NewElement->next = head;
-		head->prev->next = NewElement;
-		head->prev = NewElement;
-		if(NewElement->data > max->data) max = NewElement;
-		if(NewElement->data < min->data) min = NewElement;
+	if (IsEmpty()) {
+		element *newElement = new element;
+		newElement->prev = NULL;
+		newElement->next = NULL;
+		newElement->data = x;
+		Tail = head = newElement;
+        max[0] = head;
+		min[0] = head;
+		kolMax = 1;
+		kolMin = 1;
+	} else {
+		element *prevTail = Tail;
+		element *newTail = new element;
+		newTail->prev = prevTail;
+		newTail->next = NULL;
+		newTail->data = x;
+		Tail = newTail;
+		prevTail->next = newTail;
+		if(newTail->data == max[0]->data) {max[kolMax] = newTail; kolMax++;}
+		if(newTail->data == min[0]->data) {min[kolMin] = newTail; kolMin++;}
+		if(newTail->data > max[0]->data) {max[0] = newTail; kolMax = 1;}
+		if(newTail->data < min[0]->data) {min[0] = newTail; kolMin = 1;}
 	}
-	else
-	{
-		element* NewElement = new element;
-		head = NewElement;
-		head->next = head;
-		head->prev = head;
-		head->data = x;
-		max = head;
-		min = head;
-	}
-}
+}
 
-int List::Pop()
-{
+ int List::ShowFirst()
+ {
 	int result = head->data;
-	if(head == head->next)
-	{
-		head = NULL;
+	if (head == NULL) {
+		 return 0;
 	}
 	else
 	{
@@ -49,61 +53,139 @@ int List::Pop()
 		head = head->next;
 	}
 	return result;
-}
-
-int List::ShowFirst()
-{
-	return head->data;
-}
+ }
 
 bool List::IsEmpty()
 {
-	if(head == NULL) return true;
-	else return false;
+	return head == NULL ? true : false;
 }
 
 element* List::GetMax()
 {
+	if (head == NULL) {
+		return NULL;
+	}
+
+	element *max = head;
+	element *current = head;
+	while (current != NULL) {
+		if (current->data > max->data)
+		{
+			max = current;
+		}
+		current = current->next;
+	}
+
 	return max;
 }
 
 element* List::GetMin()
 {
+	if (head == NULL) {
+		return NULL;
+	}
+
+	element *min = head;
+	element *current = head;
+	while (current != NULL) {
+		if (current->data < min->data) {
+			min = current;
+		}
+		current = current->next;
+	}
+
 	return min;
 }
 
-void List::Swap()
+
+ void List::Swap()
 {
-	element *beforeMin = min->prev;
-	element *afterMin = min->next;
+	//element *min = GetMin();
+	//element *max = GetMax();
 
-	element *beforeMax = max->prev;
-	element *afterMax = max->next;
+	if (head == NULL || max[0] == min[0]) {
+		return;
+	}
 
+    int kolTransposition = 0;
+	if (kolMin >= kolMax)  kolTransposition = kolMax;
+	else
+	kolTransposition = kolMin;
 
-	if (beforeMin)
-		beforeMin->next = max;
-	if (afterMin)
-		afterMin->prev = max;
-	if (beforeMax)
-		beforeMax->next = min ;
-	if (afterMax)
-		afterMax->prev = min;
+    for (int i = 0; i < kolTransposition; i++)
+	{
+		element *minPrev = min[i]->prev;
+		element *minNext = min[i]->next;
+		element *maxPrev = max[i]->prev;
+		element *maxNext = max[i]->next;
 
-	min->prev = beforeMax;
-	min->next = afterMax;
+		if (min[i]->next == max[i])
+		{
+			min[i]->prev = max[i];
+			min[i]->next = maxNext;
+			max[i]->prev = minPrev;
+			max[i]->next = min[i];
 
-	max->prev = beforeMin;
-	max->next = afterMin;
-  /*
-	if (max->next == NULL)
-		Tail = max;
-	else if (min->next == NULL)
-		Tail = min;
-	if (max->prev == NULL)
-		head = max;
-	else if (min->prev == NULL)
-		head = min;
-	 */
+			if (minPrev != NULL) {
+				minPrev->next = max[i];
+			} else {
+				head = max[i];
+			}
+
+			if (maxNext != NULL) {
+				maxNext->prev = min[i];
+			} else {
+				Tail = min[i];
+			}
+
+		} else if (max[i]->next == min[i]) {
+			min[i]->prev = maxPrev;
+			min[i]->next = max[i];
+			max[i]->prev = min[i];
+			max[i]->next = minNext;
+
+			if (minNext != NULL) {
+				minNext->prev = max[i];
+			} else {
+				Tail = max[i];
+			}
+
+			if (maxPrev != NULL) {
+				maxPrev->next = min[i];
+			} else {
+				head = min[i];
+			}
+		} else {
+			min[i]->prev = maxPrev;
+			min[i]->next = maxNext;
+			max[i]->prev = minPrev;
+			max[i]->next = minNext;
+
+			if (minPrev != NULL) {
+				minPrev->next = max[i];
+			} else {
+				head = max[i];
+			}
+
+			if (minNext != NULL) {
+				minNext->prev = max[i];
+			} else {
+				Tail = max[i];
+			}
+
+			if (maxPrev != NULL) {
+				maxPrev->next = min[i];
+			} else {
+				head = min[i];
+			}
+
+			if (maxNext != NULL) {
+				maxNext->prev = min[i];
+			} else {
+				Tail = min[i];
+			}
+		}
+	}
 }
+
 #pragma package(smart_init)
