@@ -16,8 +16,8 @@ class List
 	public:
 		List() ;
 		element* head;
-		element* min[30];
-		element* max[30];
+		element* min[10];
+		element* max[10];
 		void Push(int x);
 		int Pop();
 		int ShowFirst();
