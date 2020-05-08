@@ -55,7 +55,7 @@ void __fastcall TForm1::ButtonAddClickClick(TObject *Sender)
 		int num = StrToInt(EditNumber->Text);
 		if(IsRepeat(num) && EditSecondName->Text != "")
 		{
-			if(num <= 1 || num >= 10000)
+			if(num < 1 || num >= 10000)
 			{
 				EditNumber->Text = "";
 				ShowMessage("Некорректный номер или номер не введён!!!\n Номер должен быть максимум четырёх занчным!");
@@ -198,17 +198,15 @@ void __fastcall TForm1::Button7Click(TObject *Sender)
 //---------------------------------------------------------------------------
 void __fastcall TForm1::ButtonMidlClick(TObject *Sender)
 {
-	Memo1->Lines->Add("Среднее значение всех ключей дерева: " + IntToStr(sum / kol));
+    tree.Balance();
+	tree.ShowTree(Form1->TreeView1);
+	Memo1->Lines->Add("Среднее значение всех ключей дерева: " + FloatToStr((double)sum / (double)kol));
 	Memo1->Lines->Add("\nБлижайший к среднему студент : ");
-	tree.ScanElement(Memo1, sum / kol);
+	tree.ScanElement(Memo1, (double)sum / (double)kol);
 	Memo1->Lines->Add("\n");
 
 }
 //---------------------------------------------------------------------------
-
-
-
-
 
 void __fastcall TForm1::ButtonExitClick(TObject *Sender)
 {

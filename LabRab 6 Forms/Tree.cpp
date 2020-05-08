@@ -213,25 +213,20 @@ void Tree :: Growth(TMemo *Memo)
 	TraversalPreOrder(Memo, pHead);
 }
 
-
-
-
-void Tree :: Check(TMemo *Memo, Node *p, int midl,int element)
+void Tree :: Check(TMemo *Memo, Node *p, float midl,int element)
 {
 	if(p)
 	{
-
 		Check(Memo, p->pLeft, midl, element);
 		Check(Memo, p->pRight, midl, element);
 		if ((p->number  <= midl) && ((midl - p->number) <= midl - element)){ element = p->number;}
 		if ((p->number > midl) && ((p->number - midl) < abs(element - midl))) { element = p->number;}
 		numb = element;
-
 	}
 
 }
 
-void Tree :: ScanElement(TMemo *Memo, int midl)
+void Tree :: ScanElement(TMemo *Memo, float midl)
 {
    numb = 0;
    Check(Memo, pHead, midl, 0);

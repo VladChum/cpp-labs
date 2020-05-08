@@ -23,7 +23,7 @@ private:
 	void NLR(TMemo*, Node*);
 	void TraversalPostOrder(TMemo*, Node*);
 	void TraversalPreOrder(TMemo*, Node*);
-	void Check(TMemo *, Node *, int, int);
+	void Check(TMemo *, Node *, float, int);
 	void Count(Node*, int&);
 public:
 	int numb;
@@ -37,7 +37,7 @@ public:
 	void Right(TMemo*);
 	void Back(TMemo*);
 	void Growth(TMemo*);
-	void ScanElement(TMemo*, int);
+	void ScanElement(TMemo*, float);
 };
 
 //---------------------------------------------------------------------------
