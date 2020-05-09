@@ -2,7 +2,9 @@
 
 #include <vcl.h>
 #pragma hdrstop
-#include "List.cpp"
+#include "List.h"
+#include "Queue.h"
+#include "Solver.h"
 #include "MainWindow.h"
 //---------------------------------------------------------------------------
 #pragma resource "*.dfm"
@@ -14,7 +16,7 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 	srand(time(0));
 }
 
-void TForm1::InTwoCircle(List *InputQueue)
+void TForm1::InTwoCircle(Solver *InputQueue)
 {
 	EditMin->Text = AnsiString(InputQueue->GetMin()->data);
 	EditMax->Text = AnsiString(InputQueue->GetMax()->data);
@@ -35,7 +37,7 @@ void __fastcall TForm1::ButtonOKClick(TObject *Sender)
 	ListBoxFirst->Clear();
 	try
 	{
-		List *InputQueue = new List();
+		Solver *InputQueue = new Solver();
 		char* str = AnsiString(EditInput->Text).c_str();
 		for(int i = 0; str[i]; i++)
 		{
@@ -72,7 +74,7 @@ void __fastcall TForm1::ButtonRandomClick(TObject *Sender)
 	ListBox->Clear();
 	ListBoxFirst->Clear();
 
-	List *InputQueue = new List();
+	Solver *InputQueue = new Solver();
 	int temp;
 	for(int i = 0; i < 40; i++)
 	{

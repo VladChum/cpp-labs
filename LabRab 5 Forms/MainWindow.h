@@ -29,7 +29,7 @@ __published:
 private:
 public:
 	void ShowOnListBox();
-	void InTwoCircle(List *InputQueue);
+	void InTwoCircle(Solver *InputQueue);
 	__fastcall TForm1(TComponent* Owner);
 };
 //---------------------------------------------------------------------------

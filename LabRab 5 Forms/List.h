@@ -12,19 +12,20 @@ struct  element
 
 class List
 {
-		element *Tail;
-	public:
+
+		public:
 		List() ;
 		element* head;
-		element* min[30];
-		element* max[30];
-		void Push(int x);
-		int Pop();
-		int ShowFirst();
-		bool IsEmpty();
+        element *Tail;
+		element* min[50];
+		element* max[50];
 		element* GetMax();
 		element* GetMin();
-		void SetHead(element* newhead);
-		void Swap();
+		int kolMax;
+		int kolMin;
+		void Push(int x);
+		int ShowFirst();
+		bool IsEmpty();
 };
+
 #endif
